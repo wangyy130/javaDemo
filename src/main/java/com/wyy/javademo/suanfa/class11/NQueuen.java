@@ -9,5 +9,12 @@ package com.wyy.javademo.suanfa.class11;
  */
 public class NQueuen {
 
+    public int num1(int n){
+
+    }
+
+    public int process(){
+
+    }
 
 }
