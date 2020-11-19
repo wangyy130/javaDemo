@@ -54,12 +54,14 @@ public class Knapsnak {
     }
 
     //rest 背包的剩余重量
+    //当前index对应的背包所产生的最大价值
     public int process2(int[] w, int[] v, int index, int rest){
         //如果剩余总量小于0，违规了
         if(rest < 0){
             return  -1;
         }
         //如果index已经到了最后了，没有违规，但是价值为0
+        //就是不能要他了，那么他的价值一定为0
         if(index == w.length){
             return 0;
         }
