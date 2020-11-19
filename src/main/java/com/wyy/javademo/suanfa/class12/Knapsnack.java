@@ -22,10 +22,12 @@ public class Knapsnack {
 `
      */
     public int process(int[] w, int[] v, int bag){
-        int[][] dp = new int[w.length][bag];
+
+        int N = w.length;
+        int[][] dp = new int[N + 1][bag + 1];
 
         //默认第N行都是0 ，直接从第N -1行进行遍历
-        for(int index = w.length - 1 ; index >= 0 ; index--){
+        for(int index = N - 1 ; index >= 0 ; index--){
             for(int rest = 0; rest < bag; rest++){
                 int p1 = dp[index + 1][rest];
 

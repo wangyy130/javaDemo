@@ -72,4 +72,53 @@ public class ConvertStr {
     }
 
 
+    /**
+     * 动态规划法进行转换 ，直接将暴力递归转换成动态规划
+     *
+     * 这个转换只需要一个变量，所以只需要一个一维数组
+     * @param s
+     * @return
+     */
+    public int dpWays(String s){
+        if(s == null || s.length() == 0){
+            return  0 ;
+        }
+
+        char[] str = s.toCharArray();
+        int N = str.length;
+
+        int[] dp = new int[N + 1];
+
+        //当到最后一个位置时，说明已经整体字符串遍历了一遍了，那么就是一种转化结果
+        dp[N] = 1;
+
+        //从N开始倒序遍历
+        for(int i = N - 1; i >=0 ; i--){
+            if(i == '0'){
+                dp[i] = 0;
+            }
+
+            if(i == '1'){
+                dp[i] = dp[i + 1];
+                if(i + 1 < N){
+                    dp[i] += dp[i + 2];
+                }
+            }
+
+            if(i == '2'){
+                dp[i] = dp[i +1];
+
+                if(i + 1 < N && str[i + 1] >= '0' && str[i + 1] <= '6'){
+                    dp[i] += dp[i + 2];
+                }
+            }
+
+            dp[i] = dp[i + 1];
+        }
+
+        return dp[0];
+
+
+    }
+
 }
