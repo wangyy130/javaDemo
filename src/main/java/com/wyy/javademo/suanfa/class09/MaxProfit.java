@@ -24,20 +24,21 @@ public class MaxProfit {
 
         PriorityQueue<Program> maxProfitQ = new PriorityQueue<>(new MaxProfitComparator());
 
-
+        //将所有的项目按照最小花费放入小根堆
         for(int i = 0; i < profits.length ; i++){
             minCostQ.add(new Program(costs[i],profits[i]));
         }
 
+        //循环K次，说明一共可以做K个项目
         for(int j = 0 ; j < K; j++){
 
-            //将所有花费小于W的放入花费小根堆
             while (!minCostQ.isEmpty()){
                 if(minCostQ.peek().c <= W){
+                    //将所有花费小于W的放入收益大根堆
                     maxProfitQ.add(minCostQ.poll());
                 }
             }
-
+            //如果收益大根堆为空，则直接返回，不能做项目
             if(maxProfitQ.isEmpty()){
                 return W;
             }

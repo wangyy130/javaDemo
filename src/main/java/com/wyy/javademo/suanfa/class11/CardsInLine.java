@@ -46,4 +46,44 @@ public class CardsInLine {
         //这两个哪个相对小，对方会留给我哪个
         return Math.min(f(arr,L + 1, R) , f(arr, L , R - 1));
     }
+
+
+    /**
+     * 动态规划的算法，要借助两张二维表
+     * 两个变量，L，R
+     * @param arr 给定的数字数组
+     * @return
+     */
+    public int dpWay(int[] arr){
+        if(arr == null || arr.length == 0){
+            return 0;
+        }
+
+
+        int N = arr.length;
+        int[][] f = new int[N][N]; //先手的缓存表
+        int[][] s = new int[N][N]; //后手的缓存表
+
+        //填充f先手二维表的对角线，当 L == R时，只允许先手拿一张
+        for(int i = 0; i < N ; i++){
+            f[i][i] = arr[i];
+        }
+
+        //接下来要填充对角线了 ，0列为头的对角线已经填充过了，现在从1开始进行填充
+        for(int col = 1; col < N ; col++){
+
+                int L = 0; //要遍历每一行来填充对角线
+                int R = 1;
+                while (L  < N && R < N){
+                    f[L][R] = Math.max(arr[L] + s[L + 1][R], arr[R] + s[L][R - 1]);
+
+                    s[L][R] = Math.min(f[L][R - 1],f[L + 1][R - 1]);
+                    L++;
+                    R++;
+                }
+
+        }
+
+        return Math.max(f[0][N - 1], s[0][N - 1]);
+    }
 }
