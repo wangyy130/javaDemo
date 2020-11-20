@@ -7,7 +7,7 @@ package com.wyy.javademo.suanfa.class11;
         同时遍历每列，判断每个位置是否同列，同斜线
     2、优化： 利用位运算的方法进行优化
  */
-public class NQueuen {
+public class NQueen {
 
     public int num1(int n){
         int[] record = new int[n];
