@@ -6,6 +6,8 @@ import java.util.LinkedList;
 
 /**
  * 滑动窗口最大值问题
+ *
+ * 滑动窗口：可以求一个可变窗口中的最大值和最小值
  */
 public class SlidingWindowsOfMaxValue_01 {
 
