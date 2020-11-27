@@ -1,5 +1,8 @@
 package com.wyy.javademo.Leetcode;
 
+/**
+ * 数组中排好序后，相邻两个数的相差的最大值
+ */
 public class LeetCode_164 {
 
     public static int maximumGap(int[] nums) {

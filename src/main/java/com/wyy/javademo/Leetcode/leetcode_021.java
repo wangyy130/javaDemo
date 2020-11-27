@@ -1,5 +1,8 @@
 package com.wyy.javademo.Leetcode;
 
+/**
+ * 合并两个有序链表
+ */
 public class leetcode_021 {
 
 

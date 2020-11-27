@@ -1,5 +1,8 @@
 package com.wyy.javademo.Leetcode;
 
+/**
+ * 将字符串str中按字符大小，从小到大拼，再从大到小拼，直到所有的字符用完为止
+ */
 public class Leetcode_1370 {
 
     class Solution {
