@@ -54,7 +54,7 @@ public class QuickSort {
         int M = partition(arr,L,R) ;
         process1(arr, L , M);
         process1(arr, M+1, R);
-        partition(arr,L ,R);
+
 
     }
 
