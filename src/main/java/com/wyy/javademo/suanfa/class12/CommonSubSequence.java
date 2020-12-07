@@ -15,12 +15,12 @@ package com.wyy.javademo.suanfa.class12;
  */
 public class CommonSubSequence {
 
-    public int longestCommonSubSequence(String str1,String str2){
+    public static int longestCommonSubSequence(String str1,String str2){
         if(str1 == null || "".equals(str1) || str2 == null || "".equals(str2)){
             return 0;
         }
-        char[] char1 = str1.toCharArray(); //作为列 j
-        char[] char2 = str2.toCharArray(); //作为行 i
+        char[] char1 = str1.toCharArray(); //作为行 i
+        char[] char2 = str2.toCharArray(); //作为列 j
 
         int[][] dp = new int[char1.length][char2.length];
 
@@ -53,5 +53,12 @@ public class CommonSubSequence {
 
         return dp[char1.length -1][char2.length - 1];
 
+    }
+
+
+    public static void main(String[] args) {
+        String a = "123abcdehhhhh";
+        String b = "abcdeh23454";
+        System.out.println(longestCommonSubSequence(a,b));
     }
 }
