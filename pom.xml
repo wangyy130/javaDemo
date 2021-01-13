@@ -50,6 +50,18 @@
             <artifactId>rocketmq-client</artifactId>
             <version>4.6.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.67</version>
+        </dependency>
     </dependencies>
 
     <build>
