@@ -51,8 +51,8 @@ public class AesUtil {
     public static void main(String[] args) throws Exception {
         String params = "vSi9WbP9mwYcyKnSVjfTF47OukBDNVxmaY+3R6qHLWn6OVd0xKF8FUSSt7DNE9S3ea03xWRHx3k2Rz9tvSyA1TPBVkgQsK63Oy0OL4P/TfU=";
         System.out.println(decrypt(params));
-
-        String str = "W512031001vSi9WbP9mwYcyKnSVjfTF47OukBDNVxmaY+3R6qHLWn6OVd0xKF8FUSSt7DNE9S3ea03xWRHx3k2Rz9tvSyA1TPBVkgQsK63Oy0OL4P/TfU=";
+//0000002001l3LJrhTOv+07TIGMaOUWIuAlRqsW9xKDVxaPcQ3qIpQUsmupovv+DkNp6dli4u6H+aIr7cnnAdGV7LhszKanQ8E67jpvJQXdQ+X3MV/wUCI=
+        String str = "l3LJrhTOv+07TIGMaOUWIuAlRqsW9xKDVxaPcQ3qIpQUsmupovv+DkNp6dli4u6H+aIr7cnnAdGV7LhszKanQ8E67jpvJQXdQ+X3MV/wUCI=";
         System.out.println(str.substring(0,7));
         System.out.println(str.substring(7,10));
         System.out.println(str.substring(10));
